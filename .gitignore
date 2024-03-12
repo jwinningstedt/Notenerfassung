@@ -1,0 +1,10 @@
+node_modules/
+www/
+documentation/
+.vscode/
+.vs/
+**/*.bak
+Frontend/notenerfassung/.angular/
+Backend/model/users/users.json
+Backend/model/whitelist/whitelist.json
+Backend/customlog.txt
