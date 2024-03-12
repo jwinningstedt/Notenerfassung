@@ -41,6 +41,13 @@ const routes: Routes = [
         (m) => m.GradeoverviewPageModule
       ),
   },
+  {
+    path: '**',
+    loadChildren: () =>
+      import('./pages/general/errorpage/errorpage.module').then(
+        (m) => m.ErrorpagePageModule
+      ),
+  },
 ];
 
 @NgModule({
