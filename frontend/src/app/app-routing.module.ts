@@ -19,7 +19,7 @@ const routes: Routes = [
   },
   // assignedtraineeoverview route
   {
-    path: 'meine_auszubildenden',
+    path: 'meineauszubildenden',
     loadChildren: () =>
       import(
         './pages/instructor/assignedtraineeoverview/assignedtraineeoverview.module'
@@ -27,7 +27,7 @@ const routes: Routes = [
   },
   // traineeoverview route
   {
-    path: 'alle_auszubildenden',
+    path: 'alleauszubildenden',
     loadChildren: () =>
       import('./pages/instructor/traineeoverview/traineeoverview.module').then(
         (m) => m.TraineeoverviewPageModule
