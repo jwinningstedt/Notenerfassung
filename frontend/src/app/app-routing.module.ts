@@ -1,22 +1,52 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
+// declare the routes for all pages
 const routes: Routes = [
-  {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
-  },
+  // root to login, then the route path is empty
   {
     path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
+    redirectTo: 'login',
+    pathMatch: 'full',
+  },
+  // login route
+  {
+    path: 'login',
+    loadChildren: () =>
+      import('./pages/general/login/login.module').then(
+        (m) => m.LoginPageModule
+      ),
+  },
+  // assignedtraineeoverview route
+  {
+    path: 'meine_auszubildenden',
+    loadChildren: () =>
+      import(
+        './pages/instructor/assignedtraineeoverview/assignedtraineeoverview.module'
+      ).then((m) => m.AssignedtraineeoverviewPageModule),
+  },
+  // traineeoverview route
+  {
+    path: 'alle_auszubildenden',
+    loadChildren: () =>
+      import('./pages/instructor/traineeoverview/traineeoverview.module').then(
+        (m) => m.TraineeoverviewPageModule
+      ),
+  },
+  // gradeoverview route
+  {
+    path: 'notenuebersicht',
+    loadChildren: () =>
+      import('./pages/trainee/gradeoverview/gradeoverview.module').then(
+        (m) => m.GradeoverviewPageModule
+      ),
   },
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
+    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules }),
   ],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
