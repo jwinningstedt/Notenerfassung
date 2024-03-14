@@ -1,12 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { ErrorPage } from './error.page';
 
-import { ErrorpagePage } from './errorpage.page';
-
+/**
+ ** ErrorPageRoutingModule
+ * declared the routes of the error page
+ *
+ */
 const routes: Routes = [
   {
     path: '',
-    component: ErrorpagePage,
+    component: ErrorPage,
   },
 ];
 
@@ -14,4 +18,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class ErrorpagePageRoutingModule {}
+export class ErrorPageRoutingModule {}

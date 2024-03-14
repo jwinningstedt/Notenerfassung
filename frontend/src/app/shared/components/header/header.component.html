@@ -1,0 +1,9 @@
+<ion-header *ngIf="header" class="header-header">
+  <ion-toolbar [style.--ion-toolbar-background]="header.toolbarBackgroundColor" class="header-toolbar">
+    <!--Title, includes the Name and the logo-->
+      <ion-title class="header-title">
+        <img class="header-logo" [src]="header.logo" />
+        {{header.title}}
+      </ion-title>
+  </ion-toolbar>
+</ion-header>

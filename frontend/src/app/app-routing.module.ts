@@ -41,11 +41,12 @@ const routes: Routes = [
         (m) => m.GradeoverviewPageModule
       ),
   },
+  // error routing
   {
     path: '**',
     loadChildren: () =>
-      import('./pages/general/errorpage/errorpage.module').then(
-        (m) => m.ErrorpagePageModule
+      import('./pages/general/errorpage/error.module').then(
+        (m) => m.ErrorPageModule
       ),
   },
 ];

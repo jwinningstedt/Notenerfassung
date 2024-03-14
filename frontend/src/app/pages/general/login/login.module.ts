@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { LoginPageRoutingModule } from './login-routing.module';
+import { HeaderModule } from 'src/app/shared/components/header.module';
 import { LoginPage } from './login.page';
 
 /**
@@ -13,7 +14,7 @@ import { LoginPage } from './login.page';
  * @class LoginPageModule
  */
 @NgModule({
-  imports: [CommonModule, FormsModule, IonicModule, LoginPageRoutingModule],
+  imports: [CommonModule, FormsModule, IonicModule, LoginPageRoutingModule, HeaderModule],
   declarations: [LoginPage],
 })
 export class LoginPageModule {}

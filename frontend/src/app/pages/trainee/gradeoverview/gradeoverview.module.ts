@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { GradeoverviewPageRoutingModule } from './gradeoverview-routing.module';
 import { GradeoverviewPage } from './gradeoverview.page';
+import { HeaderModule } from 'src/app/shared/components/header.module';
 
 /**
  ** GradeoverviewPageModule
@@ -18,6 +19,7 @@ import { GradeoverviewPage } from './gradeoverview.page';
     FormsModule,
     IonicModule,
     GradeoverviewPageRoutingModule,
+    HeaderModule
   ],
   declarations: [GradeoverviewPage],
 })

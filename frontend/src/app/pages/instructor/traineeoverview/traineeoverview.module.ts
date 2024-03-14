@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { TraineeoverviewPageRoutingModule } from './traineeoverview-routing.module';
 import { TraineeoverviewPage } from './traineeoverview.page';
+import { HeaderModule } from 'src/app/shared/components/header.module';
 
 /**
  ** TraineeoverviewPageModule
@@ -18,6 +19,7 @@ import { TraineeoverviewPage } from './traineeoverview.page';
     FormsModule,
     IonicModule,
     TraineeoverviewPageRoutingModule,
+    HeaderModule
   ],
   declarations: [TraineeoverviewPage],
 })
